@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="scripts.js">
+  </script>
+  <script language='JavaScript' type='text/javascript'>
+
+    function check_value()
+    {
+        switch(document.test.field.value)
+        {
+            case "one":
+             
+                document.getElementById("imagedest").innerHTML = "<img src='../static/CustN.png'>";
+                break;
+  
+            case "two":
+  
+                document.getElementById("imagedest").innerHTML = "<img src='../static/CustD.png'>"; 
+                break;
+  
+            case "three":
+  
+                document.getElementById("imagedest").innerHTML = "<img src='../static/rfm1.png'>"; 
+                break;
+  
+            case "four":
+  
+                document.getElementById("imagedest").innerHTML = "<img src='../static/rfm2.png'>"; 
+                break;
+            
+            case "five":
+  
+                document.getElementById("imagedest").innerHTML = "<img src='../static/rfm3.png'>"; 
+                break;
+  
+            case "six":
+  
+                document.getElementById("imagedest").innerHTML = "<img src='../static/rfm4.png'>"; 
+                break;
+  
+            case "seven":
+  
+                document.getElementById("imagedest").innerHTML = "<img src='../static/rfm5.png'>"; 
+                break;
+  
+            case "eight":
+  
+                document.getElementById("imagedest").innerHTML = "<img src='../static/rfm6.png'>"; 
+                break;
+  
+            case "nine":
+  
+                document.getElementById("imagedest").innerHTML = "<img src='../static/rfm7.png'>"; 
+                break;
+        }
+    }
+  
+  </script>
+	<link rel="stylesheet" href="styles.css">
+    <title>Vizualization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+    
+    .sidenav {
+      height: 100%;
+      width: 160px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 20px;
+    }
+    
+    .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+    
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    .main {
+      margin-left: 160px; /* Same as the width of the sidenav */
+      font-size: 28px; /* Increased text to enable scrolling */
+      padding: 0px 10px;
+    }
+    
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+    </style>
+        
+</head>
+<body style="margin-left:160px;padding:0">
+<div class="sidenav">
+  <br>
+  <a class="nav-item nav-link active" href="http://127.0.0.1:5000/">Home</a>
+  <a class="nav-item nav-link" href="http://127.0.0.1:5000/abt">About Us<span class="sr-only">(current)</span></a>
+  <a class="nav-item nav-link" href="http://127.0.0.1:5000/database">Database</a>
+  <a class="nav-item nav-link" href="http://127.0.0.1:5000/visualize">Data Visualization</a>
+  <a class="nav-item nav-link" href="http://127.0.0.1:5000/prediction">Prediction</a>
+  <a class="nav-item nav-link" href="http://127.0.0.1:5000/gallery">Photos</a>
+</div>
+    <!-- HEADING -->
+    <center><br>
+        <img src="../static/aa.png" width="8%" ><br><br>
+        <h2 class="display-4"><strong>Bussiness</strong> <span class="badge badge-secondary">Insight</span></h2>
+        <br>
+            <center>
+      
+              <div class="accordion" id="accordionExample">
+
+                <div class="card" style="max-width: 1500px">
+                  <div class="card-header bg-danger" id="headingOne">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link btn-block  text-white text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                       Customer Profiling
+                      </button>
+                    </h2>
+                  </div>     
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                      <script>
+                        function preLoad() {
+                          a1 = new Image; a1.src = '../static/custN.png';  
+                          a2 = new Image; a2.src = '../static/custD.png';
+                          a3 = new Image; a3.src = '../static/CustA.png';
+                          a4 = new Image; a4.src = '../static/meta-chart.png';
+                          a5 = new Image; a5.src = '../static/FTRe.png';
+                          a6 = new Image; a6.src = '../static/custID.png';
+                          a7 = new Image; a7.src = '../static/custPH.png';
+                    
+                        }
+                        function im(image) {
+                          document.getElementById(image[0]).src = eval(image + ".src")
+                        }
+                        </script>
+                    
+                    <body onLoad="preLoad()">
+                        <form autocomplete="off">
+                    <!-- 
+                            <input type="radio" name="images" id="pink" value="pink"><label class="button-label" for="pink">Pink</label>
+                            <input type="radio" name="images" id="brown" value="brown"><label class="button-label" for="brown">Brown</label>
+                            <input type="radio" name="images" id="white" value="white"><label class="button-label" for="white">White</label>
+                            <input type="radio" name="images" id="bw" value="bw"><label class="button-label" for="bw">Black and White</label> -->
+                        <input type="radio" name="1" onClick="im('a1');" id="Nationality" value="Nationality"> <label class="button-label" for="Nationality">Nationality</label>
+                        <input type="radio" name="1" onClick="im('a2');" id="Country Booked" value="Country Booked"> <label class="button-label" for="Country Booked">Country Booked</label>
+                        <input type="radio" name="1" onClick="im('a3');" id="Age" value="Age"> <label class="button-label" for="Age">Demographic</label>
+                        <input type="radio" name="1" onClick="im('a4');" id="Gender" value="Gender"> <label class="button-label" for="Gender">Gender</label>
+                        <input type="radio" name="1" onClick="im('a5');" id="Behaviour" value="Behaviour"> <label class="button-label" for="Behaviour">Monthly Booking</label>
+                        <input type="radio" name="1" onClick="im('a6');" id="ID" value="ID"> <label class="button-label" for="ID">Indonesia</label>
+                        <input type="radio" name="1" onClick="im('a7');" id="PH" value="PH"> <label class="button-label" for="PH">Philippines </label>
+                        
+                        </form>
+                        
+                        <img id="a" src="../static/aa.png" width="802" height="602" alt="">
+                    
+                    </div>
+                  </div>
+                </div>
+
+        
+                  <div class="card" style="max-width: 1500px" >
+                    <div class="card-header bg-danger" id="headingEight">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-white text-center collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Segmentation Result
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                      <div class="card-body">
+                        <center><b>KMeans<img src="../static/custKS.png" class="img-fluid" alt="Responsive image"></center>
+                        <center><b>RFM<img src="../static/custH.png" class="img-fluid" alt="Responsive image"></center>
+                      </div>
+                    </div>
+                  </div>
+        
+              </div>
+              </center>
+            
+    
+    <!--JavaScript at end of body for optimized loading-->
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="js/materialize.min.js"></script>
+     <script language='JavaScript' type='text/javascript'>
+    </script>
+
+</body>
+</html>
